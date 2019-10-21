@@ -1,0 +1,14 @@
+CREATE SCHEMA `rooms` DEFAULT CHARACTER SET utf8 ;
+CREATE TABLE 'project','meeting_org'('floor_no' INT NOT NULL,'room_no' INT NOT NULL,'room-type' VARCHAR(45) NOT NULL,'capacity' INT NULL, PRIMARY KEY('room_type'));
+insert into rooms values(1,101,'conference room',50);
+insert into rooms values(2,201,'meeting room',20);
+insert into rooms values(3,301,'auditorium room',100);
+insert into rooms values(4,401,'meeting room',20);
+insert into rooms values(5,501,'conference room',50);
+insert into rooms values(6,601,'meeting room',20);
+SELECT * FROM `meeting-org`.rooms;
+
+create table admin_credentials(userName VARCHAR(40) not null,password VARCHAR(40) not null);
+
+insert into admin_credentials values('admin','admin@123');
+commit;
